@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fr.iut</groupId>
+    <artifactId>FabulousChat</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>API</artifactId>
+  <distributionManagement>
+		<site>
+			<id>chat1</id>
+			<name>fabulousChat</name>
+			<url>http://koo.ok/${project.artifactId}</url>
+		</site>
+		<repository>
+			<id>fakeSite</id>
+			<url>http://koo.ok/</url>
+		</repository>
+	</distributionManagement>
+</project>
