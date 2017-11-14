@@ -12,7 +12,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import fr.iut.application.api.Conversation;
-
+//Pierre Biermann
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = Conversation.class)
 @AutoConfigureMockMvc
