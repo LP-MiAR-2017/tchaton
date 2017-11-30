@@ -19,4 +19,11 @@
 			<url>http://koo.ok</url>
 		</repository>
 	</distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>fr.iut</groupId>
+			<artifactId>API</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
 </project>

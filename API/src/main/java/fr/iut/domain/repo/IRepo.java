@@ -1,5 +1,9 @@
 package fr.iut.domain.repo;
 
-public interface IRepo {
+import fr.iut.domain.entity.History;
+
+public interface IRepo<T> {
+
+	T getHistory();
 
 }

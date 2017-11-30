@@ -1,0 +1,8 @@
+fr.iut
+fr.iut.application.api
+fr.iut.application.enf
+fr.iut.application.exception
+fr.iut.domain.entity
+fr.iut.domain.factory
+fr.iut.domain.repo
+fr.iut.tchaton.marketing.service.conversation

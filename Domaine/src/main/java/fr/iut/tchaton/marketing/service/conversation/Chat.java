@@ -3,13 +3,15 @@ package fr.iut.tchaton.marketing.service.conversation;
 
 import javax.annotation.Resource;
 
+import fr.iut.domain.entity.Constant;
+import fr.iut.domain.entity.History;
 import fr.iut.domain.entity.Message;
 import fr.iut.domain.factory.IFactory;
 import fr.iut.domain.repo.IRepo;
 
 public class Chat {
 	@Resource
-	IFactory factoy;
+	IFactory<History> factory;
 	@Resource
 	IRepo  repository;
 	private Message beginConversation() {
@@ -29,7 +31,19 @@ public class Chat {
 		return res;
 	}
 	private Message treatmentMessage(Message messageToService) {
-		return null;
+		Message response = new Message();
+		
+		helloCase(messageToService, response);
+		
+		return response;
+	}
+	private void helloCase(Message messageToService, Message response) {
+		if(messageToService.getMessage().contentEquals(Constant.HELLO_MESSAGE)){
+			response.setMessage(Constant.HELLO_MESSAGE);
+		}
+	}
+	public History getHistory() {
+		return factory.mkObjectHistory(repository.getHistory());
 	}
 
 }

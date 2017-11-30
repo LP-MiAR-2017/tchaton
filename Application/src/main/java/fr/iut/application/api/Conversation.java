@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.GsonBuilder;
@@ -21,7 +22,7 @@ public class Conversation {
 	private Chat chat = new Chat();
 	@ResponseBody
 	@GetMapping("conversation")
-	public String conversation(String message) {
+	public String conversation(@RequestParam(name="message",defaultValue="")String message) {
 			return mkResponse(message,checkIfWellFormed(message));
 	}
 	private String mkResponse(String message, Status checkIfWellFormed) {
@@ -31,7 +32,7 @@ public class Conversation {
 			return res;
 	}
 	private Message mkMessage(String message, Status checkIfWellFormed) {
-		return null;
+		return new Message(message);
 	}
 	private Status checkIfWellFormed(String message) {
 		LOGGER.info("message ==> " + message);
